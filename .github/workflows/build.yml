@@ -17,14 +17,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
       - name: Set up Git config
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global app.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "zhaolile"
+          git config user.email "zhaolile@example.com"
+          git config app.email "zhaolile@example.com"
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
